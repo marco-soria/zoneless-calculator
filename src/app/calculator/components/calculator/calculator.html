@@ -4,7 +4,9 @@
 >
   <div class="w-full py-5 px-6 text-6xl text-white font-thin">
     @if( subResultText() !== '0' ) {
-    <span class="text-4xl"> {{ subResultText() }} {{ lastOperator() }} </span>
+    <span id="sub-result" class="text-4xl">
+      {{ subResultText() }} {{ lastOperator() }}
+    </span>
     <br />
     }
 
@@ -69,6 +71,7 @@
       >+</app-calculator-button
     >
   </div>
+
   <div class="flex w-full">
     <app-calculator-button (onClick)="handleClick($event)"
       >0</app-calculator-button
